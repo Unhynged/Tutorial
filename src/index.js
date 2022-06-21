@@ -1,26 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// Nested Components, React Tools
-
-function Greeting() {
+function BookList() {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section>
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 }
 
-const Person = () => <h2>John Doe</h2>;
-
-const Message = () => {
-  return <p>This is my message.</p>;
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
 };
+
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/81F30JDZU9L._AC_UL604_SR604,400_.jpg"
+    alt=""
+  />
+);
+
+const Title = () => <h1>Why a Daughter Needs a Dad</h1>;
+
+const Author = () => <h4>Gregory E. Lang</h4>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Greeting />
+    <BookList />
   </React.StrictMode>
 );
