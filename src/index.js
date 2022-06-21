@@ -43,15 +43,36 @@ function BookList() {
   );
 }
 
-const Book = (props) => {
-  return (
-    <article className="book">
-      <img className="img" src={props.img} alt="" />
-      <h1>{props.title}</h1>
-      <h4>{props.author}</h4>
-    </article>
-  );
-};
+// const Book = (props) => {
+//   return (
+//     <article className="book">
+//       <img className="img" src={props.img} alt="" />
+//       <h1>{props.title}</h1>
+//       <h4>{props.author}</h4>
+//     </article>
+//   );
+// };
+
+// const Book = (props) => {
+//   const { img, title, author } = props;
+//   return (
+//     <article className="book">
+//       <img className="img" src={img} alt="" />
+//       <h1>{title}</h1>
+//       <h4>{author}</h4>
+//     </article>
+//   );
+// };
+
+const Book = ({img, title, author}) => {
+    return (
+        <article className='book'>
+            <img className='img' src={img} alt='' />
+            <h1>{title}</h1>
+            <h4>{author}</h4>
+        </article>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
