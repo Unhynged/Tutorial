@@ -19,23 +19,29 @@ const books = [
     title: "I'd Like to Play Alone, Please: Essays",
     author: "Tom Segura",
   },
+  {
+    img: "https://images-na.ssl-images-amazon.com/images/I/51kcX5PpaZL._AC_UL604_SR604,400_.jpg",
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+  },
 ];
 
-const names = ['john', 'peter', 'susan']
-const newNames = names.map((name) => {
-    return <h1>{name}</h1>
-});
-console.log(newNames);
 function BookList() {
   return (
     <section className="booklist">
-        {names}
+      {books.map((book) => {
+        const { img, title, author } = book;
+        // return <Book img={img} title={title} author={author} />;
+        return <Book book={book} />;
+      })}
     </section>
   );
 }
 
 const Book = (props) => {
-  const { img, title, author } = props;
+  console.log(props);
+  const { img, title, author } = props.book;
+
   return (
     <article className="book">
       <img className="img" src={img} alt="" />
