@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+// CSS Basics
+import './index.css';
+
 function BookList() {
   return (
-    <section>
+    <section  className="booklist">
+      <Book />
+      <Book />
+      <Book />
       <Book />
       <Book />
       <Book />
@@ -13,7 +19,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
@@ -24,7 +30,7 @@ const Book = () => {
 const Image = () => (
   <img
     src="https://images-na.ssl-images-amazon.com/images/I/81F30JDZU9L._AC_UL604_SR604,400_.jpg"
-    alt=""
+    alt="" width="280px" height="200px"
   />
 );
 
