@@ -13,7 +13,7 @@ body {
 .booklist {
     width: 90vw;
     max-width: 1170px;
-    margin: 5rem auto;
+    margin: 2.25rem;
     display: grid;
     gap: 2rem;
 }
@@ -38,4 +38,9 @@ body {
     color: #617d98;
     font-size: 0.75rem;
     margin-top: 0.25rem;
+}
+
+.img {
+    width: 340px;
+    height: 220px;
 }
